@@ -1,13 +1,21 @@
 import java.util.Scanner;
 
 public class Board {
+	public static int position;
+	
+	public static int positionOnBoard(int dice) {
+		position = dice;
+		System.out.println("the position for player is: "+position);
+		return position;
+		
+	}
 	
 	public static int throwDice() {
 		int dice1=(int)(Math.random()*6+1);
 	    int dice2=(int)(Math.random()*6+1);
-	    int sum= dice1 + dice2;
-	    
-	    System.out.println(sum); 
+	    int sum= dice1 + dice2; 
+	    System.out.println(sum);
+	    positionOnBoard(sum);
 		return sum;
 	}
 
@@ -22,6 +30,7 @@ public class Board {
 		for (int i = 0; i < PlayerPlay.length; i++) {
 			System.out.print("the dice for player " + (i+1) + " is: ");
 			PlayerPlay[i] = throwDice();
+
 		}
 		
 	}
