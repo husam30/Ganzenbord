@@ -4,8 +4,8 @@ public class Board {
 	public static int position;
 	
 	public static int positionOnBoard(int dice) {
-		position = dice;
-		System.out.println("the position for player is: "+position);
+		position  = dice;
+		//System.out.println("the position for player is: "+position);
 		return position;
 		
 	}
